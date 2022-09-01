@@ -1,7 +1,6 @@
 # 🇧🇷 Landing Page Cesar Durando
-OCTO+ is an interactive web app made for those who love movies and series.
-The final project consists of login authentication and pages with unique information for each series/movie and actors.
-> Access on: https://octoplus-iota.vercel.app
+This WEBSITE is a freelancer job
+> Access on: 
 
 
 ## 🧠 To do
