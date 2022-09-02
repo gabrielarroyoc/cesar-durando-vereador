@@ -18,16 +18,19 @@ export function Home() {
           Acompanhe mais do nosso trabalho <br />
           em Petrolina
         </Text>
-        <HStack pt="20px">
+        <HStack spacing={8} pt="20px">
           <Button
             color="white"
             variant="outline"
             borderRadius="30"
+            _hover={{ bgColor: "white", color: "blueCesar.500" }}
             w={isMobile ? "150px" : "186px"}
             h="48px"
             label="Ajude Cesar"
           ></Button>
-          <Link color="white">Mais sobre mim</Link>
+          <Link _hover={{ color: "blueCesar.500" }} color="white">
+            Mais sobre mim
+          </Link>
         </HStack>
       </Box>
     </Flex>

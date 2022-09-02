@@ -8,6 +8,7 @@ import {
   useMediaQuery,
   Divider,
   Box,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -40,46 +41,53 @@ export function Projects() {
           Projetos de Lei
         </Text>
         <Divider borderColor="grey.200" w={isMobile ? "200px" : "330px"} />
-        <Box pt="2rem">
-          <Collapse animateOpacity={true} startingHeight={155} in={show}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-            corrupti neque vel! Facere quod voluptatum sunt repellendus corrupti
-            libero aliquid, sed quis earum nobis ipsam. Nobis, at quasi! Illo,
-            vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-            sunt, eos omnis distinctio incidunt temporibus ea cumque ipsa
-            maiores, consequuntur voluptates quasi nobis possimus maxime?
-            Quisquam mollitia porro corporis dicta! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Eum corrupti neque vel! Facere quod
-            voluptatum sunt repellendus corrupti libero aliquid, sed quis earum
-            nobis ipsam. Nobis, at quasi! Illo, vero. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Ut, sunt, eos omnis distinctio
-            incidunt temporibus ea cumque ipsa maiores, consequuntur voluptates
-            quasi nobis possimus maxime? Quisquam mollitia porro corporis dicta!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-            corrupti neque vel! Facere quod voluptatum sunt repellendus corrupti
-            libero aliquid, sed quis earum nobis ipsam. Nobis, at quasi! Illo,
-            vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-            sunt, eos omnis distinctio incidunt temporibus ea cumque ipsa
-            maiores, consequuntur voluptates quasi nobis possimus maxime?
-            Quisquam mollitia porro corporis dicta!
+        <Box pb="12rem">
+          <Collapse animateOpacity={true} startingHeight={100} in={show}>
+            Criação da Semana Municipal de Conscientização da Síndrome de Down
+            em Petrolina, com o objetivo de instituir um conjunto de ações para
+            a compreensão, apoio, educação, saúde, qualidade de vida, trabalho e
+            combate ao preconceito, em relação às pessoas com Síndrome de Down,
+            seus familiares, educadores e agentes de saúde. Ementa: Projeto de
+            lei n° 032/2022 – 22/03/2022 Reconhecimento que o Instituto de
+            Auxilio ao Portador de alterações Buco-Maxilo-Faciais – IBM é de
+            utilidade pública. Construção da Praça no Bairro Areia Branca.
+            <br /> Link para o requerimento:
+            <br />
+            <Link
+              color="teal.500"
+              isExternal
+              href="https://petrolina.pe.leg.br/camararequerimento/requerimento-no-373-2022-vereador-cesar-durando/ 
+"
+            >
+              https://petrolina.pe.leg.br/camararequerimento/requerimento-no-373-2022-vereador-cesar-durando/
+            </Link>
+            <br />
+            Conheça outros requerimentos:
+            <br />
+            <Link
+              color="teal.500"
+              isExternal
+              href="https://petrolina.pe.leg.br/vereador/cesar-durando/"
+            >
+              https://petrolina.pe.leg.br/vereador/cesar-durando/
+            </Link>
           </Collapse>
+          <Button
+            maxW={"160px"}
+            borderRadius="30"
+            onClick={handleToggle}
+            mt="1rem"
+            textTransform={"uppercase"}
+            color="white"
+            bg={"blueCesar.500"}
+            _hover={{
+              bgColor: "gray.400",
+              color: "blueCesar.500",
+            }}
+          >
+            Mostrar {show ? "menos" : "mais"}
+          </Button>
         </Box>
-        <Button
-          maxW={"160px"}
-          borderRadius="30"
-          onClick={handleToggle}
-          mt="1rem"
-          textTransform={"uppercase"}
-          color="white"
-          isActive={true}
-          bg={"blueCesar.500"}
-          _hover={{ bg: "gray.200" }}
-          _active={{
-            bg: "grayCesar.500",
-          }}
-        >
-          Mostrar {show ? "menos" : "mais"}
-        </Button>
       </VStack>
     </Flex>
   );

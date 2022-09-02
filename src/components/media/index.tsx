@@ -6,6 +6,8 @@ import {
   Text,
   VStack,
   useMediaQuery,
+  HStack,
+  Stack,
 } from "@chakra-ui/react";
 
 export function Media() {
@@ -34,11 +36,56 @@ export function Media() {
           </Text>
 
           <Divider w="180px" orientation="horizontal" />
-          <Image
-            w="70%"
-            pt="20px"
-            src="https://uploaddeimagens.com.br/images/004/001/375/original/101839669_606440430298896_8345816835228672043_n.jpg?1661788976"
-          />
+          <Stack
+            spacing={8}
+            direction={["column", "column", "column", "row"]}
+            w={isMobile ? "100%" : ""}
+          >
+            <Image
+              w="70%"
+              pt="20px"
+              src="https://uploaddeimagens.com.br/images/004/008/464/original/1.png?1662142551"
+            />
+            <Image
+              w="70%"
+              pt="20px"
+              src="https://uploaddeimagens.com.br/images/004/008/436/original/119560797_678431303099808_8415759730511567755_n.jpg?1662142010"
+            />
+            <Image
+              w="70%"
+              pt="20px"
+              src="https://uploaddeimagens.com.br/images/004/008/455/original/3.png?1662142368"
+            />
+            <Image
+              w="70%"
+              pt="20px"
+              src="https://uploaddeimagens.com.br/images/004/008/491/original/Sem_T%C3%ADtulo-1.png?1662143308"
+            />
+          </Stack>
+          <Stack
+            spacing={8}
+            direction={["column", "column", "column", "row"]}
+            w={isMobile ? "100%" : ""}
+          >
+            <Image
+              w="70%"
+              display={{ base: "none", md: "block" }}
+              pt="20px"
+              src="https://uploaddeimagens.com.br/images/004/008/486/original/4.png?1662143244"
+            />
+            <Image
+              w="70%"
+              display={{ base: "none", md: "block" }}
+              pt="20px"
+              src="https://uploaddeimagens.com.br/images/004/008/488/original/5.png?1662143258"
+            />
+            <Image
+              w="70%"
+              display={{ base: "none", md: "block" }}
+              pt="20px"
+              src="https://uploaddeimagens.com.br/images/004/008/543/original/cesar_durando.png?1662144820"
+            ></Image>
+          </Stack>
         </VStack>
       </Box>
     </Flex>

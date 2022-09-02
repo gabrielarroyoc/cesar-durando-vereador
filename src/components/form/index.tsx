@@ -1,20 +1,42 @@
 import {
   Flex,
   FormControl,
-  FormLabel,
   Input,
   Button,
   Box,
-  Spacer,
   VStack,
   HStack,
   Textarea,
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export function Form() {
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ui3d42d",
+        "template_9xtsr7q",
+        e.target,
+        "UBAiwnzjHhlLwJLwC"
+      )
+      .then(
+        (result: any) => {
+          console.log(result.text);
+        },
+        (error: any) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   const [isMobile] = useMediaQuery("(max-width: 720px)");
   const [input, setInput] = useState("");
 
@@ -40,62 +62,67 @@ export function Form() {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Box
-            m="10rem"
-            bgColor={"white"}
-            w={isMobile ? "100%" : "50%"}
-            h="50%"
-            borderWidth="1px"
-            rounded="lg"
-            overflow="hidden"
-          >
-            <FormControl pt="2rem" ml="2rem" w={isMobile ? "100%" : "50%"}>
-              <HStack spacing={6}>
-                <Input
-                  required={true}
-                  variant="flushed"
-                  type="Nome"
-                  borderColor="blue.500"
-                  color="black"
-                  placeholder="Primeiro Nome*"
-                  onChange={handleInputChange}
-                />
-                <Input
-                  mt="1rem"
-                  variant="flushed"
-                  color="black"
-                  borderColor="blue.500"
-                  placeholder="Sobrenome*"
-                  type="Sobrenome"
-                  onChange={handleInputChange}
-                />
-              </HStack>
-              <HStack spacing={6}>
-                <Input
-                  mt="1rem"
-                  variant="flushed"
-                  color="black"
-                  borderColor="blue.500"
-                  placeholder="Email*"
-                  type="Email"
-                  onChange={handleInputChange}
-                />
-                <Input
-                  mt="1rem"
-                  variant="flushed"
-                  color="black"
-                  borderColor="blue.500"
-                  placeholder="Telefone*"
-                  type="Fone"
-                  onChange={handleInputChange}
-                />
+          <HStack p="20" borderRadius={"30px"} bgColor={"white"} w="60%">
+            <FormControl
+              ref={form}
+              onSubmit={sendEmail}
+              pt="2rem"
+              w={isMobile ? "100%" : "50%"}
+            >
+              <Text>SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</Text>
+              <HStack w="100%" h="auto" spacing={6}>
+                <VStack w="100%" h="auto" spacing={5}>
+                  <Input
+                    isRequired
+                    required={true}
+                    variant="flushed"
+                    type="text"
+                    name="user_name"
+                    borderColor="blue.500"
+                    color="black"
+                    placeholder="Primeiro Nome*"
+                    onChange={handleInputChange}
+                  />
+                  <Input
+                    isRequired
+                    variant="flushed"
+                    color="black"
+                    borderColor="blue.500"
+                    placeholder="Email"
+                    type="email"
+                    name="user_email"
+                    onChange={handleInputChange}
+                  />
+                </VStack>
+                <VStack w="100%" spacing={5}>
+                  <Input
+                    isRequired
+                    variant="flushed"
+                    color="black"
+                    borderColor="blue.500"
+                    placeholder="Sobrenome"
+                    type="Sobrenome"
+                    onChange={handleInputChange}
+                  />
+                  <Input
+                    isRequired
+                    variant="flushed"
+                    color="black"
+                    borderColor="blue.500"
+                    placeholder="Telefone"
+                    type="tel"
+                    name="telefone"
+                    onChange={handleInputChange}
+                  />
+                </VStack>
               </HStack>
               <Textarea
-                mt="1rem"
+                isRequired
                 variant="flushed"
                 color="black"
+                name="message"
                 borderColor="blue.500"
-                placeholder="Mensagem*"
+                placeholder="Mensagem"
                 onChange={handleInputChange}
               />
               <Button
@@ -104,12 +131,13 @@ export function Form() {
                 color="black"
                 type="submit"
                 aria-label="enviar"
+                onSubmit={sendEmail}
               >
-                aaaaaa
+                ENVIAR
               </Button>
-              <Box bgColor="blue.500"></Box>
             </FormControl>
-          </Box>
+            <Box w="40%" h="500px" borderRadius="30" bgColor="blue.500"></Box>
+          </HStack>
         </Flex>
       </Flex>
     </>

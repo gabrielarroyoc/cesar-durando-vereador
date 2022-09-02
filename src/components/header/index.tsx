@@ -19,20 +19,26 @@ export function Header() {
     {
       return (
         <HStack gap="8">
-          <Link color="white">Trajetória</Link>
-          <Link color="white">Media</Link>
-          <Link color="white">Projetos de Lei</Link>
-          <Link color="white">Contato</Link>
+          <Link _hover={{ color: "blueCesar.500" }} color="white" href="#">
+            Trajetória
+          </Link>
+          <Link _hover={{ color: "blueCesar.500" }} color="white" href="#sobre">
+            Social Media
+          </Link>
+          <Link _hover={{ color: "blueCesar.500" }} color="white">
+            Projetos
+          </Link>
+          <Link _hover={{ color: "blueCesar.500" }} color="white">
+            Contato
+          </Link>
           <Center height="50px">
             <Divider orientation="vertical" />
           </Center>
           <Button
             textColor="white"
-            color="#0065AB"
+            bgColor="blueCesar.500"
             borderRadius="30"
-            _focus={{
-              bg: "blueCesar.500",
-            }}
+            _hover={{ bgColor: "whiteCesar.500", color: "blueCesar.500" }}
             label="CONTRIBUIR"
           ></Button>
         </HStack>
@@ -69,8 +75,8 @@ export function Header() {
           {isMobile ? (
             <Menu
               options={[
-                { label: "Início", link: "/" },
-                { label: "Sobre", link: "/about" },
+                { label: "Trajetória", link: "/" },
+                { label: "Social Media", link: "/" },
                 { label: "Projetos", link: "/" },
                 { label: "Contato", link: "/" },
               ]}

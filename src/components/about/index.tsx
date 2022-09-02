@@ -18,7 +18,7 @@ export function About() {
 
   return (
     <Flex
-      className="Sobre"
+      className="sobre"
       w="100%"
       gap="10"
       direction={["column", "row", "row", "row"]}
@@ -46,33 +46,20 @@ export function About() {
           orientation="horizontal"
         />
         <Box pt="2rem">
-          <Collapse animateOpacity={true} startingHeight={200} in={show}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-            praesentium possimus deserunt illum quo quia a eum voluptate
-            accusantium deleniti cupiditate, repellendus laudantium ullam
-            commodi assumenda alias natus laborum quas. Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Quasi praesentium possimus
-            deserunt illum quo quia a eum voluptate accusantium deleniti
-            cupiditate, repellendus laudantium ullam commodi assumenda alias
-            natus laborum quas. <br />
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-            praesentium possimus deserunt illum quo quia a eum voluptate
-            accusantium deleniti cupiditate, repellendus laudantium ullam
-            commodi assumenda alias natus laborum quas. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Ut, sunt, eos omnis distinctio
-            incidunt temporibus ea cumque ipsa maiores, consequuntur voluptates
-            quasi nobis possimus maxime? Quisquam mollitia porro corporis
-            dicta!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-            sunt, eos omnis distinctio incidunt temporibus ea cumque ipsa
-            maiores, consequuntur voluptates quasi nobis possimus maxime?
-            Quisquam mollitia porro corporis dicta!Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Ut, sunt, eos omnis distinctio
-            incidunt temporibus ea cumque ipsa maiores, consequuntur voluptates
-            quasi nobis possimus maxime? Quisquam mollitia porro corporis
-            dicta!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-            sunt, eos omnis distinctio incidunt temporibus ea cumque ipsa
-            maiores, consequuntur voluptates quasi nobis possimus maxime?
-            Quisquam mollitia porro corporis dicta!
+          <Collapse animateOpacity={true} startingHeight={100} in={show}>
+            Natural de Petrolina, o Vereador César Durando é formado em
+            odontologia, filho do ex-prefeito Simão Durando, marido e pai de 03
+            filhos. Na sua trajetória política, já foi Assessor Parlamentar do
+            Deputado Federal Osvaldo Coelho, foi Chefe de Gabinete do
+            ex-Prefeito Guilherme Coelho, Secretário de Saúde e Secretário de
+            Serviços Públicos de Petrolina. Ex-presidente da Associação
+            Brasileira de Odontologia – Regional Petrolina (ABO), ex-Assessor do
+            Ministério da Integração Nacional-Diretor da RIDE e ex-Diretor da
+            Junta Comercial de Pernambuco. Foi Presidente da Câmara de
+            Vereadores de Petrolina, e também Primeiro Secretário da Mesa
+            Diretora da Casa. Atualmente, estou no meu 3º Mandato como vereador,
+            como presidente da Comissão de Saúde e Secretário da Comissão de
+            Finanças da Câmara de Petrolina.
           </Collapse>
         </Box>
         <Button
@@ -82,11 +69,10 @@ export function About() {
           mt="1rem"
           textTransform={"uppercase"}
           color="white"
-          isActive={true}
           bgColor={"blueCesar.500"}
-          _hover={{ bg: "gray.200" }}
-          _active={{
-            bg: "blueCesar.500",
+          _hover={{
+            bgColor: "gray.400",
+            color: "blueCesar.500",
           }}
         >
           Mostrar {show ? "menos" : "mais"}
