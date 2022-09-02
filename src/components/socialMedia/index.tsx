@@ -19,7 +19,7 @@ export function SocialMedia() {
       bgColor="white"
       w="100%"
     >
-      <Box align={"center"} mt={isMobile ? "10rem" : "0rem"} mb="10rem">
+      <Box mt={isMobile ? "10rem" : "0rem"} mb="10rem">
         <Text as="b" color="blue.500" fontSize="48px">
           Social Media
         </Text>
