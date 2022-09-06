@@ -6,11 +6,12 @@ import {
   HStack,
   Image,
   Link,
+  Button,
   Spacer,
   useMediaQuery,
 } from "@chakra-ui/react";
 
-import { Button } from "../button/index";
+import { Buttons } from "../button/index";
 import { Menu } from "../menu";
 
 export function Header() {
@@ -19,28 +20,40 @@ export function Header() {
     {
       return (
         <HStack gap="8">
-          <Link _hover={{ color: "blueCesar.500" }} color="white" href="#">
+          <Link _hover={{ color: "blueCesar.500" }} color="white" href="#sobre">
             Trajetória
           </Link>
-          <Link _hover={{ color: "blueCesar.500" }} color="white" href="#sobre">
+          <Link
+            _hover={{ color: "blueCesar.500" }}
+            color="white"
+            href="#socialmedia"
+          >
             Social Media
           </Link>
-          <Link _hover={{ color: "blueCesar.500" }} color="white">
+          <Link
+            _hover={{ color: "blueCesar.500" }}
+            color="white"
+            href="#projetos"
+          >
             Projetos
           </Link>
-          <Link _hover={{ color: "blueCesar.500" }} color="white">
+          <Link
+            _hover={{ color: "blueCesar.500" }}
+            color="white"
+            href="#contato"
+          >
             Contato
           </Link>
           <Center height="50px">
             <Divider orientation="vertical" />
           </Center>
-          <Button
+          <Buttons
             textColor="white"
             bgColor="blueCesar.500"
             borderRadius="30"
             _hover={{ bgColor: "whiteCesar.500", color: "blueCesar.500" }}
             label="CONTRIBUIR"
-          ></Button>
+          ></Buttons>
         </HStack>
       );
     }
@@ -70,12 +83,15 @@ export function Header() {
         alignItems="center"
         p="1rem"
       >
-        <Image src="https://uploaddeimagens.com.br/images/003/997/375/original/logo.png?1661478464"></Image>
+        <Link href="">
+          <Image src="https://uploaddeimagens.com.br/images/003/997/375/original/logo.png?1661478464" />
+        </Link>
+
         <HStack>
           {isMobile ? (
             <Menu
               options={[
-                { label: "Trajetória", link: "/" },
+                { label: "Trajetória", link: "#sobre" },
                 { label: "Social Media", link: "/" },
                 { label: "Projetos", link: "/" },
                 { label: "Contato", link: "/" },

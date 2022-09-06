@@ -8,6 +8,7 @@ import {
   useMediaQuery,
   HStack,
   Stack,
+  AspectRatio,
 } from "@chakra-ui/react";
 
 export function Media() {
@@ -20,17 +21,27 @@ export function Media() {
       className="Media"
       w="100%"
     >
-      <Box pt={isMobile ? "20rem" : "13rem"} h="2000px" w="600px">
+      <Box
+        data-aos="fade-right"
+        data-aos-delay={200}
+        pt={isMobile ? "20rem" : "13rem"}
+        h="2000px"
+        w="600px"
+      >
         <VStack ml={isMobile ? "7rem" : "7rem"} align={"left"}>
           <Text color={"white"} fontSize="48px">
             Videos
           </Text>
           <Divider w="180px" orientation="horizontal" />
-          <Image
-            pt="20px"
-            w="70%"
-            src="https://uploaddeimagens.com.br/images/004/001/371/original/c%C3%A9sar-durando.jpg?1661788760"
-          />
+          <AspectRatio maxW="560px" ratio={1 / 1}>
+            <iframe
+              width="400"
+              height="100"
+              src="https://www.youtube.com/embed/_NmScoclcgo"
+              title="Cesar Durando"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </AspectRatio>
           <Text color={"white"} fontSize="48px">
             Fotos
           </Text>

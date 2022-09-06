@@ -18,6 +18,9 @@ export function SocialMedia() {
       className="SocialMedia"
       bgColor="white"
       w="100%"
+      id="socialmedia"
+      data-aos="fade-right"
+      data-aos-delay={200}
     >
       <Box mt={isMobile ? "10rem" : "0rem"} mb="10rem">
         <Text as="b" color="blue.500" fontSize="48px">

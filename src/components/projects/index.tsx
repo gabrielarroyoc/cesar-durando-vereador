@@ -18,6 +18,9 @@ export function Projects() {
   const [isMobile] = useMediaQuery("(max-width: 720px)");
   return (
     <Flex
+      id="projetos"
+      data-aos="fade-right"
+      data-aos-delay={200}
       direction={["column", "column", "row", "row"]}
       className="Projetos"
       alignItems="center"

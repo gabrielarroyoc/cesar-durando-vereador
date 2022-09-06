@@ -1,5 +1,5 @@
 import { Box, Flex, HStack, Link, Text, useMediaQuery } from "@chakra-ui/react";
-import { Button } from "../button/index";
+import { Buttons } from "../button/index";
 
 export function Home() {
   const [isMobile] = useMediaQuery("(max-width: 720px)");
@@ -19,7 +19,7 @@ export function Home() {
           em Petrolina
         </Text>
         <HStack spacing={8} pt="20px">
-          <Button
+          <Buttons
             color="white"
             variant="outline"
             borderRadius="30"
@@ -27,8 +27,13 @@ export function Home() {
             w={isMobile ? "150px" : "186px"}
             h="48px"
             label="Ajude Cesar"
-          ></Button>
-          <Link _hover={{ color: "blueCesar.500" }} color="white">
+          ></Buttons>
+          <Link
+            href="#sobre"
+            transition={"ease-in-out"}
+            _hover={{ color: "blueCesar.500" }}
+            color="white"
+          >
             Mais sobre mim
           </Link>
         </HStack>

@@ -6,7 +6,7 @@ interface Props extends ButtonProps {
   link?: string;
 }
 
-export function Button({ label, link, ...rest }: Props) {
+export function Buttons({ label, link, ...rest }: Props) {
   return (
     <ChakraButton h="48px" w="160px" colorScheme="blueCesar.500" {...rest}>
       {link ? <Link to={link}>{label}</Link> : label}

@@ -18,7 +18,9 @@ export function About() {
 
   return (
     <Flex
-      className="sobre"
+      data-aos="fade-right"
+      data-aos-delay={200}
+      id="sobre"
       w="100%"
       gap="10"
       direction={["column", "row", "row", "row"]}

@@ -1,6 +1,8 @@
-import { Flex, VStack } from "@chakra-ui/react";
-import { Button } from "./components/button/index";
-import { useState } from "react";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+import AOS from "aos";
+import { Flex, VStack, Button, Link } from "@chakra-ui/react";
+import emailjs from "@emailjs/browser";
+import { useState, useEffect } from "react";
 import { Header } from "./components/header";
 import { Home } from "./components/home";
 import { About } from "./components/about";
@@ -8,8 +10,18 @@ import { Media } from "./components/media";
 import { Projects } from "./components/projects";
 import { SocialMedia } from "./components/socialMedia";
 import { Form } from "./components/form";
+import { ArrowUpIcon } from "@chakra-ui/icons";
 
 function App({ children, value, onChange }: any) {
+  useEffect(() => {
+    emailjs.init("UBAiwnzjHhlLwJLwC");
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      duration: 250,
+    });
+  }, []);
+
   return (
     <>
       <Flex
@@ -27,6 +39,17 @@ function App({ children, value, onChange }: any) {
       ></Flex>
 
       <VStack>
+        <Link
+          data-aos="fade-up"
+          data-aos-delay={100}
+          href="#"
+          right="3rem"
+          bottom="3rem"
+          position="fixed"
+        >
+          <ArrowUpIcon />
+        </Link>
+
         <Header />
         <Home />
 
