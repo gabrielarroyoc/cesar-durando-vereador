@@ -11,6 +11,7 @@ import {
   useMediaQuery,
   Stack,
   Link,
+  Icon,
 } from "@chakra-ui/react";
 import { AiOutlineMail, AiOutlineYoutube } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
@@ -69,9 +70,10 @@ export function Form() {
         >
           <HStack
             data-aos="fade-right"
-            data-aos-delay={200}
+            data-aos-delay={700}
             h="500px"
             pl="20"
+            pr={isMobile ? "20" : "0"}
             borderRadius={"30px"}
             bgColor={"white"}
             w="60%"
@@ -84,9 +86,14 @@ export function Form() {
               onSubmit={(e) => sendEmail(e)}
               w={isMobile ? "100%" : "50%"}
             >
-              <HStack w="100%" spacing={6}>
-                <VStack w="100%" spacing={5}>
+              <Stack
+                direction={["column", "column", "row"]}
+                w="100%"
+                spacing={6}
+              >
+                <Stack direction={["column", "column"]} w="100%" spacing={5}>
                   <Input
+                    w="auto"
                     isRequired
                     required={true}
                     variant="flushed"
@@ -107,8 +114,8 @@ export function Form() {
                     name="user_email"
                     onChange={handleInputChange}
                   />
-                </VStack>
-                <VStack w="100%" spacing={5}>
+                </Stack>
+                <Stack w="100%" direction={["column", "column"]} spacing={5}>
                   <Input
                     isRequired
                     variant="flushed"
@@ -128,8 +135,8 @@ export function Form() {
                     name="telefone"
                     onChange={handleInputChange}
                   />
-                </VStack>
-              </HStack>
+                </Stack>
+              </Stack>
               <Textarea
                 isRequired
                 variant="flushed"
@@ -149,26 +156,43 @@ export function Form() {
                 ENVIAR
               </Button>
             </Flex>
-            <Box w="40%" h="500px" borderRadius="30" bgColor="blue.500">
-              <Box mt="6" ml="10">
+            <Box
+              w="40%"
+              display={{ base: "none", md: "block" }}
+              h="500px"
+              borderRadius="30"
+              bgColor="blue.500"
+            >
+              <Box display={{ base: "none", md: "block" }} mt="6" ml="10">
                 <Text as="b" fontSize={isMobile ? "10px" : "28px"}>
                   Contato
                 </Text>
-                <Text as="b" fontSize={isMobile ? "10px" : "18px"}>
-                  <BsTelephone />
+                <Text fontSize={isMobile ? "10px" : "18px"}>
+                  <Icon as={BsTelephone} />
                   (87) 3862-9279
                 </Text>
-                <Text fontSize={isMobile ? "10px" : "19px"} as="b">
-                  <AiOutlineMail /> cesar.durando@yahoo.com.br
+                <Text fontSize={isMobile ? "10px" : "19px"}>
+                  <Icon as={AiOutlineMail} />
+                  cesar.durando@yahoo.com.br
                 </Text>
               </Box>
 
               <Box mt="20">
-                <VStack>
-                  <Text as="b" fontSize={isMobile ? "10px" : "28px"}>
+                <Stack>
+                  <Text
+                    pl="10"
+                    display={{ base: "none", md: "block" }}
+                    as="b"
+                    fontSize={isMobile ? "10px" : "25px"}
+                  >
                     Siga-nos nas redes sociais
                   </Text>
-                  <HStack>
+                  <Stack
+                    p="10"
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                    direction={["column", "column", "row", "row"]}
+                  >
                     <Link isExternal href="https://twitter.com/CesarDurando">
                       <BsTwitter />
                     </Link>
@@ -193,8 +217,8 @@ export function Form() {
                     >
                       <AiOutlineYoutube fontSize={"23px"} />
                     </Link>
-                  </HStack>
-                </VStack>
+                  </Stack>
+                </Stack>
               </Box>
             </Box>
           </HStack>

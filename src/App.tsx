@@ -39,14 +39,7 @@ function App({ children, value, onChange }: any) {
       ></Flex>
 
       <VStack>
-        <Link
-          data-aos="fade-up"
-          data-aos-delay={100}
-          href="#"
-          right="3rem"
-          bottom="3rem"
-          position="fixed"
-        >
+        <Link href="#" right="3rem" bottom="3rem" position="fixed">
           <ArrowUpIcon />
         </Link>
 

@@ -19,7 +19,7 @@ export function About() {
   return (
     <Flex
       data-aos="fade-right"
-      data-aos-delay={200}
+      data-aos-delay={600}
       id="sobre"
       w="100%"
       gap="10"
@@ -44,7 +44,7 @@ export function About() {
         </Text>
         <Divider
           borderColor="gray.500"
-          w={isMobile ? "300px" : "540px"}
+          w={isMobile ? "200px" : "340px"}
           orientation="horizontal"
         />
         <Box pt="2rem">
