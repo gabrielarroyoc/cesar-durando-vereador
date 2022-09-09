@@ -72,21 +72,24 @@ export function Form() {
             data-aos="fade-right"
             data-aos-delay={700}
             h="500px"
-            pl="20"
-            pr={isMobile ? "20" : "0"}
+            pl="4rem"
+            pr={isMobile ? "2rem" : "0"}
+            justifyContent="center"
             borderRadius={"30px"}
             bgColor={"white"}
-            w="60%"
+            w={isMobile ? "80%" : "60%"}
             gap="100px"
           >
             <Flex
               direction="column"
               ref={form}
+              justifyContent={"center"}
               as="form"
               onSubmit={(e) => sendEmail(e)}
-              w={isMobile ? "100%" : "50%"}
+              w={isMobile ? "60%" : "50%"}
             >
               <Stack
+                justifyContent={"center"}
                 direction={["column", "column", "row"]}
                 w="100%"
                 spacing={6}
@@ -146,19 +149,28 @@ export function Form() {
                 placeholder="Mensagem*"
                 onChange={handleInputChange}
               />
+
               <Button
+                maxW={"160px"}
+                borderRadius="30"
                 mt="2rem"
-                bgColor="blue.500"
-                color="black"
+                color="white"
                 type="submit"
                 aria-label="enviar"
+                textTransform={"uppercase"}
+                bgColor={"blueCesar.500"}
+                _hover={{
+                  bgColor: "gray.400",
+                  color: "blueCesar.500",
+                }}
               >
                 ENVIAR
               </Button>
             </Flex>
             <Box
+              ml="4rem"
+              p="1.75rem"
               w="40%"
-              display={{ base: "none", md: "block" }}
               h="500px"
               borderRadius="30"
               bgColor="blue.500"
@@ -167,11 +179,12 @@ export function Form() {
                 <Text as="b" fontSize={isMobile ? "10px" : "28px"}>
                   Contato
                 </Text>
-                <Text fontSize={isMobile ? "10px" : "18px"}>
+
+                <Text pt="2rem" fontSize={isMobile ? "10px" : "18px"}>
                   <Icon as={BsTelephone} />
                   (87) 3862-9279
                 </Text>
-                <Text fontSize={isMobile ? "10px" : "19px"}>
+                <Text pr="2rem" fontSize={isMobile ? "10px" : "19px"}>
                   <Icon as={AiOutlineMail} />
                   cesar.durando@yahoo.com.br
                 </Text>
@@ -188,7 +201,6 @@ export function Form() {
                     Siga-nos nas redes sociais
                   </Text>
                   <Stack
-                    p="10"
                     alignItems={"center"}
                     justifyContent={"center"}
                     direction={["column", "column", "row", "row"]}

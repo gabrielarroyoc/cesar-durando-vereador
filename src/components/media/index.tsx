@@ -29,12 +29,12 @@ export function Media() {
         h="2000px"
         w="600px"
       >
-        <VStack ml={isMobile ? "7rem" : "7rem"} align={"left"}>
+        <VStack ml={isMobile ? "4rem" : "7rem"} pr="2rem" align={"left"}>
           <Text color={"white"} fontSize="48px">
             Videos
           </Text>
           <Divider w="180px" orientation="horizontal" />
-          <AspectRatio maxW="560px" ratio={1 / 1}>
+          <AspectRatio maxW="560px" ratio={1}>
             <iframe
               width="400"
               height="100"
@@ -44,16 +44,16 @@ export function Media() {
             ></iframe>
           </AspectRatio>
         </VStack>
-        <Stack ml="7rem">
+        <Stack ml={isMobile ? "4rem" : "7rem"}>
           <Text color={"white"} fontSize="48px">
             Fotos
           </Text>
 
           <Divider w="180px" orientation="horizontal" />
           <Grid
-            ml="7rem"
+            ml="4rem"
             gap="4"
-            mt="2rem"
+            mt="1rem"
             w={isMobile ? "100%" : "100%"}
             templateColumns={{
               base: "repeat(1, 15rem)",
@@ -153,12 +153,6 @@ export function Media() {
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/429/original/11.jpeg?1662673315"
-            ></Image>
-            <Image
-              w="100%"
-              display={{ base: "none", md: "block" }}
-              pt="20px"
-              src="https://uploaddeimagens.com.br/images/004/015/430/original/12.jpeg?1662673336"
             ></Image>
           </Grid>
         </Stack>
