@@ -21,7 +21,7 @@ export function Home() {
           Trabalhando em Petrolina com
         </Text>
         <Text
-          lineHeight={1.3}
+          lineHeight={1}
           fontSize={isMobile ? "40px" : "60px"}
           color="white"
           as="b"

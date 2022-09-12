@@ -26,7 +26,7 @@ function App({ children, value, onChange }: any) {
   return (
     <>
       <Flex
-        bgImage="https://uploaddeimagens.com.br/images/004/019/854/original/fundo_home.png?1663017069"
+        bgImage="https://uploaddeimagens.com.br/images/004/019/980/original/fundo_home.png?1663022934"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
         filter="auto"

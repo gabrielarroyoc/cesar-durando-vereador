@@ -36,6 +36,7 @@ export function About() {
       />
 
       <VStack
+        mt="6rem"
         align={"left"}
         ml={isMobile ? "4rem" : "11rem"}
         w={isMobile ? "80%" : "40%"}
@@ -49,7 +50,7 @@ export function About() {
           orientation="horizontal"
         />
         <Box pt="2rem">
-          <Collapse animateOpacity={true} startingHeight={100} in={show}>
+          <Collapse animateOpacity={true} startingHeight={150} in={show}>
             <Text fontSize={"20px"}>
               Natural de Petrolina, o Vereador César Durando é formado em
               odontologia, filho do ex-prefeito Simão Durando, marido e pai de

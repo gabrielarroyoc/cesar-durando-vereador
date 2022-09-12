@@ -130,20 +130,7 @@ export function Media() {
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/419/original/2.jpeg?1662673053"
             ></Image>
-            <Image
-              w="100%"
-              alt="cesar-durando"
-              display={{ base: "none", md: "block" }}
-              pt="20px"
-              src="https://uploaddeimagens.com.br/images/004/015/420/original/3.jpeg?1662673059"
-            ></Image>
-            <Image
-              w="100%"
-              alt="cesar-durando"
-              display={{ base: "none", md: "block" }}
-              pt="20px"
-              src="https://uploaddeimagens.com.br/images/004/015/421/original/4.jpeg?1662673081"
-            ></Image>
+
             <Image
               w="100%"
               alt="cesar-durando"
@@ -151,33 +138,13 @@ export function Media() {
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/422/original/5.jpeg?1662673100"
             ></Image>
-            <Image
-              w="100%"
-              alt="cesar-durando"
-              display={{ base: "none", md: "block" }}
-              pt="20px"
-              src="https://uploaddeimagens.com.br/images/004/015/424/original/7.jpeg?1662673113"
-            ></Image>
+
             <Image
               w="100%"
               alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/427/original/9.jpeg?1662673152"
-            ></Image>
-            <Image
-              alt="cesar-durando"
-              w="100%"
-              display={{ base: "none", md: "block" }}
-              pt="20px"
-              src="https://uploaddeimagens.com.br/images/004/015/428/original/10.jpeg?1662673305"
-            ></Image>
-            <Image
-              alt="cesar-durando"
-              w="100%"
-              display={{ base: "none", md: "block" }}
-              pt="20px"
-              src="https://uploaddeimagens.com.br/images/004/015/429/original/11.jpeg?1662673315"
             ></Image>
           </Grid>
         </Stack>

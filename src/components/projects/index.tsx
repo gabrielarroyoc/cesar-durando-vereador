@@ -27,7 +27,7 @@ export function Projects() {
       w="100%"
     >
       <Image
-        mt="0"
+        mt="-2"
         display={{ base: "none", md: "block" }}
         w="50%"
         h="200%"

@@ -24,10 +24,16 @@ export function Header() {
     {
       return (
         <HStack gap="8">
-          <Link _hover={{ color: "blueCesar.500" }} color="white" href="#sobre">
+          <Link
+            _hover={{ color: "blueCesar.500" }}
+            fontSize="18px"
+            color="white"
+            href="#sobre"
+          >
             Trajetória
           </Link>
           <Link
+            fontSize="18px"
             _hover={{ color: "blueCesar.500" }}
             color="white"
             href="#socialmedia"
@@ -35,6 +41,7 @@ export function Header() {
             Social Media
           </Link>
           <Link
+            fontSize="18px"
             _hover={{ color: "blueCesar.500" }}
             color="white"
             href="#projetos"
