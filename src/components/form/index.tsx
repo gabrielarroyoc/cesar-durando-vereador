@@ -1,10 +1,8 @@
 import {
   Flex,
-  FormControl,
   Input,
   Button,
   Box,
-  VStack,
   HStack,
   Textarea,
   Text,
@@ -69,8 +67,6 @@ export function Form() {
           alignItems={"center"}
         >
           <HStack
-            data-aos="fade-right"
-            data-aos-delay={700}
             h="500px"
             pl="4rem"
             pr={isMobile ? "2rem" : "0"}
@@ -94,7 +90,12 @@ export function Form() {
                 w="100%"
                 spacing={6}
               >
-                <Stack direction={["column", "column"]} w="100%" spacing={5}>
+                <Stack
+                  pl="1rem"
+                  direction={["column", "column"]}
+                  w="100%"
+                  spacing={5}
+                >
                   <Input
                     w="auto"
                     isRequired
@@ -118,7 +119,12 @@ export function Form() {
                     onChange={handleInputChange}
                   />
                 </Stack>
-                <Stack w="100%" direction={["column", "column"]} spacing={5}>
+                <Stack
+                  pl="1rem"
+                  w="100%"
+                  direction={["column", "column"]}
+                  spacing={5}
+                >
                   <Input
                     isRequired
                     variant="flushed"
@@ -141,6 +147,7 @@ export function Form() {
                 </Stack>
               </Stack>
               <Textarea
+                ml="1rem"
                 isRequired
                 variant="flushed"
                 color="black"
@@ -151,6 +158,7 @@ export function Form() {
               />
 
               <Button
+                ml="1rem"
                 maxW={"160px"}
                 borderRadius="30"
                 mt="2rem"
@@ -174,6 +182,7 @@ export function Form() {
               h="500px"
               borderRadius="30"
               bgColor="blue.500"
+              pt={isMobile ? "20" : "0"}
             >
               <Box display={{ base: "none", md: "block" }} mt="6" ml="10">
                 <Text as="b" fontSize={isMobile ? "10px" : "28px"}>
@@ -181,11 +190,11 @@ export function Form() {
                 </Text>
 
                 <Text pt="2rem" fontSize={isMobile ? "10px" : "18px"}>
-                  <Icon as={BsTelephone} />
+                  <Icon mr="2" as={BsTelephone} />
                   (87) 3862-9279
                 </Text>
                 <Text pr="2rem" fontSize={isMobile ? "10px" : "19px"}>
-                  <Icon as={AiOutlineMail} />
+                  <Icon mr="2" as={AiOutlineMail} />
                   cesar.durando@yahoo.com.br
                 </Text>
               </Box>

@@ -18,8 +18,9 @@ export function About() {
 
   return (
     <Flex
+      pt={isMobile ? "70px" : "0"}
       data-aos="fade-right"
-      data-aos-delay={600}
+      data-aos-delay={500}
       id="sobre"
       w="100%"
       gap="10"
@@ -28,9 +29,9 @@ export function About() {
       <Image
         display={{ base: "none", md: "none", lg: "block" }}
         w="30%"
-        h="60%"
+        h="10%"
         ml="7rem"
-        pb="8rem"
+        alt="cesar-durando"
         src="https://uploaddeimagens.com.br/images/004/001/167/original/conhe%C3%A7a.png?1661783358"
       />
 
@@ -49,19 +50,21 @@ export function About() {
         />
         <Box pt="2rem">
           <Collapse animateOpacity={true} startingHeight={100} in={show}>
-            Natural de Petrolina, o Vereador César Durando é formado em
-            odontologia, filho do ex-prefeito Simão Durando, marido e pai de 03
-            filhos. Na sua trajetória política, já foi Assessor Parlamentar do
-            Deputado Federal Osvaldo Coelho, foi Chefe de Gabinete do
-            ex-Prefeito Guilherme Coelho, Secretário de Saúde e Secretário de
-            Serviços Públicos de Petrolina. Ex-presidente da Associação
-            Brasileira de Odontologia – Regional Petrolina (ABO), ex-Assessor do
-            Ministério da Integração Nacional-Diretor da RIDE e ex-Diretor da
-            Junta Comercial de Pernambuco. Foi Presidente da Câmara de
-            Vereadores de Petrolina, e também Primeiro Secretário da Mesa
-            Diretora da Casa. Atualmente, estou no meu 3º Mandato como vereador,
-            como presidente da Comissão de Saúde e Secretário da Comissão de
-            Finanças da Câmara de Petrolina.
+            <Text fontSize={"20px"}>
+              Natural de Petrolina, o Vereador César Durando é formado em
+              odontologia, filho do ex-prefeito Simão Durando, marido e pai de
+              03 filhos. Na sua trajetória política, já foi Assessor Parlamentar
+              do Deputado Federal Osvaldo Coelho, foi Chefe de Gabinete do
+              ex-Prefeito Guilherme Coelho, Secretário de Saúde e Secretário de
+              Serviços Públicos de Petrolina. Ex-presidente da Associação
+              Brasileira de Odontologia – Regional Petrolina (ABO), ex-Assessor
+              do Ministério da Integração Nacional-Diretor da RIDE e ex-Diretor
+              da Junta Comercial de Pernambuco. Foi Presidente da Câmara de
+              Vereadores de Petrolina, e também Primeiro Secretário da Mesa
+              Diretora da Casa. Atualmente, estou no meu 3º Mandato como
+              vereador, como presidente da Comissão de Saúde e Secretário da
+              Comissão de Finanças da Câmara de Petrolina.
+            </Text>
           </Collapse>
         </Box>
         <Button

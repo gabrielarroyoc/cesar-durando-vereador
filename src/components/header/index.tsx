@@ -1,3 +1,4 @@
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Center,
@@ -6,13 +7,16 @@ import {
   HStack,
   Image,
   Link,
+  Menu,
   Button,
   Spacer,
   useMediaQuery,
+  MenuList,
+  MenuItem,
+  MenuButton,
 } from "@chakra-ui/react";
 
 import { Buttons } from "../button/index";
-import { Menu } from "../menu";
 
 export function Header() {
   const [isMobile] = useMediaQuery("(max-width: 720px)");
@@ -37,13 +41,6 @@ export function Header() {
           >
             Projetos
           </Link>
-          <Link
-            _hover={{ color: "blueCesar.500" }}
-            color="white"
-            href="#contato"
-          >
-            Contato
-          </Link>
           <Center height="50px">
             <Divider orientation="vertical" />
           </Center>
@@ -52,7 +49,7 @@ export function Header() {
             bgColor="blueCesar.500"
             borderRadius="30"
             _hover={{ bgColor: "whiteCesar.500", color: "blueCesar.500" }}
-            label="CONTRIBUIR"
+            label="CONTATO"
           ></Buttons>
         </HStack>
       );
@@ -84,19 +81,29 @@ export function Header() {
         p="1rem"
       >
         <Link href="">
-          <Image src="https://uploaddeimagens.com.br/images/003/997/375/original/logo.png?1661478464" />
+          <Image
+            alt="cesar-durando"
+            src="https://uploaddeimagens.com.br/images/003/997/375/original/logo.png?1661478464"
+          />
         </Link>
 
         <HStack>
           {isMobile ? (
-            <Menu
-              options={[
-                { label: "Trajetória", link: "#sobre" },
-                { label: "Social Media", link: "/" },
-                { label: "Projetos", link: "/" },
-                { label: "Contato", link: "/" },
-              ]}
-            />
+            <Menu>
+              <MenuButton
+                as={Button}
+                rightIcon={<HamburgerIcon />}
+              ></MenuButton>
+              <MenuList>
+                <MenuItem>Trajetória</MenuItem>
+                <MenuItem>
+                  <Link>Social Media</Link>
+                </MenuItem>
+                <MenuItem>Projetos</MenuItem>
+                <MenuItem>Contato</MenuItem>
+                <MenuItem>Contribuir</MenuItem>
+              </MenuList>
+            </Menu>
           ) : (
             <NavButtons />
           )}

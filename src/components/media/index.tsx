@@ -31,7 +31,7 @@ export function Media() {
       >
         <VStack ml={isMobile ? "4rem" : "7rem"} pr="2rem" align={"left"}>
           <Text color={"white"} fontSize="48px">
-            Videos
+            Video
           </Text>
           <Divider w="180px" orientation="horizontal" />
           <AspectRatio maxW="560px" ratio={1}>
@@ -43,6 +43,15 @@ export function Media() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </AspectRatio>
+          {/* <AspectRatio maxW="560px" ratio={1}>
+            <iframe
+              width="400"
+              height="100"
+              src="https://www.youtube.com/shorts/7C0AsuzR8a4"
+              title="Cesar Durando"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </AspectRatio> */}
         </VStack>
         <Stack ml={isMobile ? "4rem" : "7rem"}>
           <Text color={"white"} fontSize="48px">
@@ -63,32 +72,38 @@ export function Media() {
             }}
           >
             <Image
+              alt="cesar-durando"
               w="100%"
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/008/464/original/1.png?1662142551"
             />
             <Image
+              alt="cesar-durando"
               w="100%"
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/008/436/original/119560797_678431303099808_8415759730511567755_n.jpg?1662142010"
             />
             <Image
+              alt="cesar-durando"
               w="100%"
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/008/455/original/3.png?1662142368"
             />
             <Image
+              alt="cesar-durando"
               w="100%"
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/008/491/original/Sem_T%C3%ADtulo-1.png?1662143308"
             />
             <Image
+              alt="cesar-durando"
               w="100%"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/008/486/original/4.png?1662143244"
             />
             <Image
+              alt="cesar-durando"
               w="100%"
               display={{ base: "none", md: "block" }}
               pt="20px"
@@ -96,59 +111,69 @@ export function Media() {
             />
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/008/543/original/cesar_durando.png?1662144820"
             ></Image>
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/418/original/1.jpeg?1662673035"
             ></Image>
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/419/original/2.jpeg?1662673053"
             ></Image>
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/420/original/3.jpeg?1662673059"
             ></Image>
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/421/original/4.jpeg?1662673081"
             ></Image>
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/422/original/5.jpeg?1662673100"
             ></Image>
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/424/original/7.jpeg?1662673113"
             ></Image>
             <Image
               w="100%"
+              alt="cesar-durando"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/427/original/9.jpeg?1662673152"
             ></Image>
             <Image
+              alt="cesar-durando"
               w="100%"
               display={{ base: "none", md: "block" }}
               pt="20px"
               src="https://uploaddeimagens.com.br/images/004/015/428/original/10.jpeg?1662673305"
             ></Image>
             <Image
+              alt="cesar-durando"
               w="100%"
               display={{ base: "none", md: "block" }}
               pt="20px"

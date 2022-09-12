@@ -5,12 +5,27 @@ export function Home() {
   const [isMobile] = useMediaQuery("(max-width: 720px)");
 
   return (
-    <Flex w="100%">
-      <Box ml={isMobile ? "3rem" : "7rem"} mt="100px" h="900px" w="100%">
-        <Text color="white" fontSize={isMobile ? "19px" : "28px"}>
+    <Flex w="100%" pt="200px">
+      <Box
+        ml={isMobile ? "2rem" : "7rem"}
+        mt={{ base: "-750px", md: "-200px", lg: "-170px", xl: "-100px" }}
+        mb="200px"
+        h={{ base: "1000px", md: "500px", lg: "500px", xl: "550px" }}
+        w="100%"
+      >
+        <Text
+          mt={isMobile ? "650px" : "0px"}
+          color="white"
+          fontSize={isMobile ? "19px" : "28px"}
+        >
           Trabalhando em Petrolina com
         </Text>
-        <Text fontSize={isMobile ? "40px" : "60px"} color="white" as="b">
+        <Text
+          lineHeight={1.3}
+          fontSize={isMobile ? "40px" : "60px"}
+          color="white"
+          as="b"
+        >
           Experiência e <br />
           Compromisso
         </Text>

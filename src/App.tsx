@@ -11,6 +11,7 @@ import { Projects } from "./components/projects";
 import { SocialMedia } from "./components/socialMedia";
 import { Form } from "./components/form";
 import { ArrowUpIcon } from "@chakra-ui/icons";
+import { ParallaxBanner } from "react-scroll-parallax";
 
 function App({ children, value, onChange }: any) {
   useEffect(() => {
@@ -25,7 +26,7 @@ function App({ children, value, onChange }: any) {
   return (
     <>
       <Flex
-        bgImage="https://uploaddeimagens.com.br/images/003/998/195/original/fundo_home.png?1661530991"
+        bgImage="https://uploaddeimagens.com.br/images/004/019/854/original/fundo_home.png?1663017069"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
         filter="auto"
@@ -39,10 +40,6 @@ function App({ children, value, onChange }: any) {
       ></Flex>
 
       <VStack>
-        <Link href="#" right="3rem" bottom="3rem" position="fixed">
-          <ArrowUpIcon />
-        </Link>
-
         <Header />
         <Home />
 
