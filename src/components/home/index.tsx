@@ -7,17 +7,13 @@ export function Home() {
   return (
     <Flex w="100%" pt="200px">
       <Box
-        ml={isMobile ? "2rem" : "7rem"}
-        mt={{ base: "-750px", md: "-200px", lg: "-170px", xl: "-100px" }}
+        ml={isMobile ? "5rem" : "7rem"}
+        mt={{ base: "-170px", md: "-200px", lg: "-200px", xl: "-120px" }}
         mb="200px"
-        h={{ base: "1000px", md: "500px", lg: "500px", xl: "550px" }}
+        h={{ base: "200px", md: "500px", lg: "500px", xl: "550px" }}
         w="100%"
       >
-        <Text
-          mt={isMobile ? "650px" : "0px"}
-          color="white"
-          fontSize={isMobile ? "19px" : "28px"}
-        >
+        <Text color="white" fontSize={isMobile ? "19px" : "28px"}>
           Trabalhando em Petrolina com
         </Text>
         <Text
@@ -34,15 +30,17 @@ export function Home() {
           em Petrolina
         </Text>
         <HStack spacing={8} pt="20px">
-          <Buttons
-            color="white"
-            variant="outline"
-            borderRadius="30"
-            _hover={{ bgColor: "white", color: "blueCesar.500" }}
-            w={isMobile ? "150px" : "186px"}
-            h="48px"
-            label="Ajude Cesar"
-          ></Buttons>
+          <Link href="#contato">
+            <Buttons
+              color="white"
+              variant="outline"
+              borderRadius="30"
+              _hover={{ bgColor: "white", color: "blueCesar.500" }}
+              w={isMobile ? "150px" : "186px"}
+              h="48px"
+              label="Ajude Cesar"
+            ></Buttons>
+          </Link>
           <Link
             href="#sobre"
             transition={"ease-in-out"}

@@ -14,7 +14,11 @@ import {
   MenuList,
   MenuItem,
   MenuButton,
+  IconButton,
+  VStack,
+  CSSReset,
 } from "@chakra-ui/react";
+import React from "react";
 
 import { Buttons } from "../button/index";
 
@@ -23,7 +27,7 @@ export function Header() {
   const NavButtons = () => {
     {
       return (
-        <HStack gap="8">
+        <HStack w="100%" gap="8">
           <Link
             _hover={{ color: "blueCesar.500" }}
             fontSize="18px"
@@ -51,24 +55,21 @@ export function Header() {
           <Center height="50px">
             <Divider orientation="vertical" />
           </Center>
-          <Buttons
-            textColor="white"
-            bgColor="blueCesar.500"
-            borderRadius="30"
-            _hover={{ bgColor: "whiteCesar.500", color: "blueCesar.500" }}
-            label="CONTATO"
-          ></Buttons>
+          <Link href="#contato">
+            <Buttons
+              textColor="white"
+              bgColor="blueCesar.500"
+              borderRadius="30"
+              _hover={{ bgColor: "whiteCesar.500", color: "blueCesar.500" }}
+              label="FALE CONOSCO"
+            ></Buttons>
+          </Link>
         </HStack>
       );
     }
   };
   return (
-    <Flex
-      m="0 7rem 0 7rem"
-      w="100%"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Flex w="100%" justifyContent="center" alignItems="center">
       <Flex
         w="100%"
         maxW={{
@@ -96,21 +97,32 @@ export function Header() {
 
         <HStack>
           {isMobile ? (
-            <Menu>
-              <MenuButton
-                as={Button}
-                rightIcon={<HamburgerIcon />}
-              ></MenuButton>
-              <MenuList>
-                <MenuItem>Trajetória</MenuItem>
-                <MenuItem>
-                  <Link>Social Media</Link>
-                </MenuItem>
-                <MenuItem>Projetos</MenuItem>
-                <MenuItem>Contato</MenuItem>
-                <MenuItem>Contribuir</MenuItem>
-              </MenuList>
-            </Menu>
+            <>
+              <CSSReset />
+              <Menu>
+                <MenuButton as={MenuButton} aria-label="Options">
+                  <HamburgerIcon />
+                </MenuButton>
+                <MenuList>
+                  <VStack>
+                    <MenuItem>
+                      <Link href="#sobre">
+                        <Button>Trajetória</Button>
+                      </Link>
+                    </MenuItem>
+                    <Link href="#socialmedia">
+                      <Button>Social Media</Button>
+                    </Link>
+                    <Link href="#projetos">
+                      <Button>Projetos</Button>
+                    </Link>
+                    <Link href="#contato">
+                      <Button>Contato</Button>
+                    </Link>
+                  </VStack>
+                </MenuList>
+              </Menu>
+            </>
           ) : (
             <NavButtons />
           )}

@@ -184,16 +184,20 @@ export function Form() {
               bgColor="blue.500"
               pt={isMobile ? "20" : "0"}
             >
-              <Box display={{ base: "none", md: "block" }} mt="6" ml="10">
+              <Box
+                display={{ base: "none", md: "none", lg: "block" }}
+                mt="6"
+                ml="10"
+              >
                 <Text as="b" fontSize={isMobile ? "10px" : "28px"}>
                   Contato
                 </Text>
 
-                <Text pt="2rem" fontSize={isMobile ? "10px" : "18px"}>
+                <Text pt="2rem" fontSize={isMobile ? "10px" : "15px"}>
                   <Icon mr="2" as={BsTelephone} />
                   (87) 3862-9279
                 </Text>
-                <Text pr="2rem" fontSize={isMobile ? "10px" : "19px"}>
+                <Text pr="2rem" fontSize={isMobile ? "10px" : "15px"}>
                   <Icon mr="2" as={AiOutlineMail} />
                   cesar.durando@yahoo.com.br
                 </Text>
@@ -203,7 +207,7 @@ export function Form() {
                 <Stack>
                   <Text
                     pl="10"
-                    display={{ base: "none", md: "block" }}
+                    display={{ base: "none", md: "none", lg: "block" }}
                     as="b"
                     fontSize={isMobile ? "10px" : "25px"}
                   >
@@ -212,7 +216,7 @@ export function Form() {
                   <Stack
                     alignItems={"center"}
                     justifyContent={"center"}
-                    direction={["column", "column", "row", "row"]}
+                    direction={["column", "column", "column", "row"]}
                   >
                     <Link isExternal href="https://twitter.com/CesarDurando">
                       <BsTwitter />

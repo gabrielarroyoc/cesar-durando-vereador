@@ -23,7 +23,7 @@ export function About() {
       data-aos-delay={500}
       id="sobre"
       w="100%"
-      gap="10"
+      gap="8"
       direction={["column", "row", "row", "row"]}
     >
       <Image
@@ -31,12 +31,13 @@ export function About() {
         w="30%"
         h="10%"
         ml="7rem"
+        pb="3rem"
         alt="cesar-durando"
         src="https://uploaddeimagens.com.br/images/004/001/167/original/conhe%C3%A7a.png?1661783358"
       />
 
       <VStack
-        mt="6rem"
+        mt="10rem"
         align={"left"}
         ml={isMobile ? "4rem" : "11rem"}
         w={isMobile ? "80%" : "40%"}
