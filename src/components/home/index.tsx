@@ -30,7 +30,7 @@ export function Home() {
           em Petrolina
         </Text>
         <HStack spacing={8} pt="20px">
-          <Link href="#contato">
+          <Link textDecorationLine={"none"} href="#contato">
             <Buttons
               color="white"
               variant="outline"
@@ -38,7 +38,7 @@ export function Home() {
               _hover={{ bgColor: "white", color: "blueCesar.500" }}
               w={isMobile ? "150px" : "186px"}
               h="48px"
-              label="Ajude Cesar"
+              label="Entre em contato"
             ></Buttons>
           </Link>
           <Link

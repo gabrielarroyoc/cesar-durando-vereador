@@ -68,7 +68,7 @@ export function Media() {
               base: "repeat(1, 15rem)",
               md: "repeat(3, 12rem)",
               lg: "repeat(4, 14rem)",
-              xl: "repeat(4, 20rem)",
+              xl: "repeat(3, 20rem)",
             }}
           >
             <Image

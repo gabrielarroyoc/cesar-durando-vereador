@@ -20,7 +20,7 @@ export function Projects() {
     <Flex
       id="projetos"
       data-aos="fade-right"
-      data-aos-delay={600}
+      data-aos-delay={500}
       direction={["column", "column", "row", "row"]}
       className="Projetos"
       alignItems="center"

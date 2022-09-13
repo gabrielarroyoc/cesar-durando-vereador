@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import "@fontsource/lato";
 
 export const theme = extendTheme({
   fonts: {

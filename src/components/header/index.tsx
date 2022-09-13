@@ -34,7 +34,7 @@ export function Header() {
             color="white"
             href="#sobre"
           >
-            Trajetória
+            TRAJETÓRIA
           </Link>
           <Link
             fontSize="18px"
@@ -42,7 +42,7 @@ export function Header() {
             color="white"
             href="#socialmedia"
           >
-            Social Media
+            SOCIAL MEDIA
           </Link>
           <Link
             fontSize="18px"
@@ -50,7 +50,7 @@ export function Header() {
             color="white"
             href="#projetos"
           >
-            Projetos
+            PROJETOS
           </Link>
           <Center height="50px">
             <Divider orientation="vertical" />
@@ -61,7 +61,7 @@ export function Header() {
               bgColor="blueCesar.500"
               borderRadius="30"
               _hover={{ bgColor: "whiteCesar.500", color: "blueCesar.500" }}
-              label="FALE CONOSCO"
+              label="CONTATO"
             ></Buttons>
           </Link>
         </HStack>
