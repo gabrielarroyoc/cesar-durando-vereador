@@ -87,17 +87,10 @@ export function Form() {
               <Stack
                 justifyContent={"center"}
                 direction={["column", "column", "row"]}
-                w="100%"
                 spacing={6}
               >
-                <Stack
-                  pl="1rem"
-                  direction={["column", "column"]}
-                  w="100%"
-                  spacing={5}
-                >
+                <Stack pl="1rem" direction={["column", "column"]} spacing={5}>
                   <Input
-                    w="auto"
                     isRequired
                     required={true}
                     variant="flushed"
@@ -119,12 +112,7 @@ export function Form() {
                     onChange={handleInputChange}
                   />
                 </Stack>
-                <Stack
-                  pl="1rem"
-                  w="100%"
-                  direction={["column", "column"]}
-                  spacing={5}
-                >
+                <Stack pl="1rem" direction={["column", "column"]} spacing={5}>
                   <Input
                     isRequired
                     variant="flushed"
@@ -193,12 +181,18 @@ export function Form() {
                   Contato
                 </Text>
 
-                <Text pt="2rem" fontSize={isMobile ? "10px" : "15px"}>
+                <Text
+                  pt="2rem"
+                  fontSize={{ base: "10px", md: "10px", lg: "11px" }}
+                >
                   <Icon mr="2" as={BsTelephone} />
                   (87) 3862-9279
                 </Text>
-                <Text pr="2rem" fontSize={isMobile ? "10px" : "15px"}>
-                  <Icon mr="2" as={AiOutlineMail} />
+                <Text
+                  pr="2rem"
+                  fontSize={{ base: "10px", md: "10px", lg: "10px" }}
+                >
+                  <Icon pt="2px" mr="2" as={AiOutlineMail} />
                   cesar.durando@yahoo.com.br
                 </Text>
               </Box>

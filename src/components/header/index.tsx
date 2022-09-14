@@ -17,12 +17,22 @@ import {
   IconButton,
   VStack,
   CSSReset,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+  useDisclosure,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
 import React from "react";
 
 import { Buttons } from "../button/index";
 
 export function Header() {
+  const firstField = React.useRef();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
   const [isMobile] = useMediaQuery("(max-width: 720px)");
   const NavButtons = () => {
     {
@@ -34,7 +44,7 @@ export function Header() {
             color="white"
             href="#sobre"
           >
-            TRAJETÓRIA
+            Trajetória
           </Link>
           <Link
             fontSize="18px"
@@ -42,7 +52,7 @@ export function Header() {
             color="white"
             href="#socialmedia"
           >
-            SOCIAL MEDIA
+            Social Media
           </Link>
           <Link
             fontSize="18px"
@@ -50,18 +60,18 @@ export function Header() {
             color="white"
             href="#projetos"
           >
-            PROJETOS
+            Projetos
           </Link>
           <Center height="50px">
             <Divider orientation="vertical" />
           </Center>
-          <Link href="#contato">
+          <Link _hover={{ textDecoration: "none" }} href="#contato">
             <Buttons
               textColor="white"
               bgColor="blueCesar.500"
               borderRadius="30"
               _hover={{ bgColor: "whiteCesar.500", color: "blueCesar.500" }}
-              label="CONTATO"
+              label="FALE CONOSCO"
             ></Buttons>
           </Link>
         </HStack>
@@ -98,30 +108,38 @@ export function Header() {
         <HStack>
           {isMobile ? (
             <>
-              <CSSReset />
-              <Menu>
-                <MenuButton as={MenuButton} aria-label="Options">
-                  <HamburgerIcon />
-                </MenuButton>
-                <MenuList>
-                  <VStack>
-                    <MenuItem>
+              <Button colorScheme="transparent" onClick={onOpen}>
+                <HamburgerIcon />
+              </Button>
+              <Drawer
+                isOpen={isOpen}
+                placement="right"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+                initialFocusRef={firstField}
+              >
+                <DrawerOverlay />
+                <DrawerContent>
+                  <DrawerCloseButton />
+                  <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
+                  <DrawerBody>
+                    <VStack>
                       <Link href="#sobre">
                         <Button>Trajetória</Button>
                       </Link>
-                    </MenuItem>
-                    <Link href="#socialmedia">
-                      <Button>Social Media</Button>
-                    </Link>
-                    <Link href="#projetos">
-                      <Button>Projetos</Button>
-                    </Link>
-                    <Link href="#contato">
-                      <Button>Contato</Button>
-                    </Link>
-                  </VStack>
-                </MenuList>
-              </Menu>
+                      <Link href="#socialmedia">
+                        <Button>Social Media</Button>
+                      </Link>
+                      <Link href="#projetos">
+                        <Button>Projetos</Button>
+                      </Link>
+                      <Link href="#contato">
+                        <Button>Contato</Button>
+                      </Link>
+                    </VStack>
+                  </DrawerBody>
+                </DrawerContent>
+              </Drawer>
             </>
           ) : (
             <NavButtons />

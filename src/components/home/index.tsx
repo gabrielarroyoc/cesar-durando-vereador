@@ -7,10 +7,16 @@ export function Home() {
   return (
     <Flex w="100%" pt="200px">
       <Box
-        ml={isMobile ? "5rem" : "7rem"}
-        mt={{ base: "-170px", md: "-200px", lg: "-200px", xl: "-120px" }}
+        ml={isMobile ? "2rem" : "7rem"}
+        mt={{ base: "-50px", md: "-200px", lg: "-200px", xl: "-120px" }}
         mb="200px"
-        h={{ base: "200px", md: "500px", lg: "500px", xl: "550px" }}
+        h={{
+          base: "200px",
+          md: "500px",
+          lg: "500px",
+          xl: "24rem",
+          "2xl": "34rem",
+        }}
         w="100%"
       >
         <Text color="white" fontSize={isMobile ? "19px" : "28px"}>
@@ -30,7 +36,7 @@ export function Home() {
           em Petrolina
         </Text>
         <HStack spacing={8} pt="20px">
-          <Link textDecorationLine={"none"} href="#contato">
+          <Link _hover={{ textDecoration: "none" }} href="#contato">
             <Buttons
               color="white"
               variant="outline"
@@ -47,7 +53,7 @@ export function Home() {
             _hover={{ color: "blueCesar.500" }}
             color="white"
           >
-            Mais sobre mim
+            Ajude Cesar
           </Link>
         </HStack>
       </Box>
