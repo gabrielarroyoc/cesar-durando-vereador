@@ -124,16 +124,22 @@ export function Header() {
                   <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
                   <DrawerBody>
                     <VStack>
-                      <Link href="#sobre">
+                      <Link href="#sobre" _hover={{ textDecoration: "none" }}>
                         <Button>Trajetória</Button>
                       </Link>
-                      <Link href="#socialmedia">
+                      <Link
+                        href="#socialmedia"
+                        _hover={{ textDecoration: "none" }}
+                      >
                         <Button>Social Media</Button>
                       </Link>
-                      <Link href="#projetos">
+                      <Link
+                        href="#projetos"
+                        _hover={{ textDecoration: "none" }}
+                      >
                         <Button>Projetos</Button>
                       </Link>
-                      <Link href="#contato">
+                      <Link href="#contato" _hover={{ textDecoration: "none" }}>
                         <Button>Contato</Button>
                       </Link>
                     </VStack>

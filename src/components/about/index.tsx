@@ -27,11 +27,12 @@ export function About() {
       direction={["column", "row", "row", "row"]}
     >
       <Image
+        boxShadow="dark-lg"
         display={{ base: "none", md: "none", lg: "block" }}
         w="30%"
         h="10%"
         ml="7rem"
-        pb="3rem"
+        mb="3rem"
         alt="cesar-durando"
         src="https://uploaddeimagens.com.br/images/004/001/167/original/conhe%C3%A7a.png?1661783358"
       />

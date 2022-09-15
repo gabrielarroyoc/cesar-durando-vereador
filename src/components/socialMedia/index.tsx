@@ -38,18 +38,26 @@ export function SocialMedia() {
           alignItems="center"
         >
           <Image
+            borderRadius={20}
+            boxShadow="dark-lg"
             alt="cesar-durando"
             src="https://uploaddeimagens.com.br/images/004/001/386/original/social_media_fundo.png?1661789308"
           />
           <Image
+            borderRadius={20}
+            boxShadow="dark-lg"
             alt="cesar-durando"
             src="https://uploaddeimagens.com.br/images/004/001/390/original/social_media_foto.png?1661789401"
           />
           <Image
+            borderRadius={20}
+            boxShadow="dark-lg"
             alt="cesar-durando"
             src="https://uploaddeimagens.com.br/images/004/001/391/original/social_media_foto_3.png?1661789535"
           />
           <Image
+            borderRadius={20}
+            boxShadow="dark-lg"
             alt="cesar-durando"
             src="https://uploaddeimagens.com.br/images/004/001/393/original/social_media_foto_4.png?1661789635"
           />

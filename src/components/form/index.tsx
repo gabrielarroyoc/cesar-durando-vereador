@@ -69,7 +69,7 @@ export function Form() {
           <HStack
             h="500px"
             pl="4rem"
-            pr={isMobile ? "2rem" : "0"}
+            pr={isMobile ? "0rem" : "0"}
             justifyContent="center"
             borderRadius={"30px"}
             bgColor={"white"}
@@ -89,7 +89,7 @@ export function Form() {
                 direction={["column", "column", "row"]}
                 spacing={6}
               >
-                <Stack pl="1rem" direction={["column", "column"]} spacing={5}>
+                <Stack direction={["column", "column"]} spacing={5}>
                   <Input
                     isRequired
                     required={true}
@@ -112,7 +112,11 @@ export function Form() {
                     onChange={handleInputChange}
                   />
                 </Stack>
-                <Stack pl="1rem" direction={["column", "column"]} spacing={5}>
+                <Stack
+                  pl={isMobile ? "0rem" : "2rem"}
+                  direction={["column", "column"]}
+                  spacing={5}
+                >
                   <Input
                     isRequired
                     variant="flushed"
@@ -135,7 +139,6 @@ export function Form() {
                 </Stack>
               </Stack>
               <Textarea
-                ml="1rem"
                 isRequired
                 variant="flushed"
                 color="black"
@@ -146,7 +149,6 @@ export function Form() {
               />
 
               <Button
-                ml="1rem"
                 maxW={"160px"}
                 borderRadius="30"
                 mt="2rem"
@@ -183,14 +185,24 @@ export function Form() {
 
                 <Text
                   pt="2rem"
-                  fontSize={{ base: "10px", md: "10px", lg: "11px" }}
+                  fontSize={{
+                    base: "10px",
+                    md: "10px",
+                    lg: "11px",
+                    "2xl": "15px",
+                  }}
                 >
                   <Icon mr="2" as={BsTelephone} />
                   (87) 3862-9279
                 </Text>
                 <Text
                   pr="2rem"
-                  fontSize={{ base: "10px", md: "10px", lg: "10px" }}
+                  fontSize={{
+                    base: "10px",
+                    md: "10px",
+                    lg: "10px",
+                    "2xl": "15px",
+                  }}
                 >
                   <Icon pt="2px" mr="2" as={AiOutlineMail} />
                   cesar.durando@yahoo.com.br

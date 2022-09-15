@@ -30,7 +30,7 @@ function App({ children, value, onChange }: any) {
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
         filter="auto"
-        backgroundPosition={{ base: "70% 80%", md: "center", lg: "center" }}
+        backgroundPosition={{ base: "92% 40%", md: "center", lg: "center" }}
         className="container"
         w="100%"
         top="0"
