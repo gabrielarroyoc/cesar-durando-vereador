@@ -56,7 +56,7 @@ export function Media() {
             mt="1rem"
             w={isMobile ? "100%" : "100%"}
             templateColumns={{
-              base: "repeat(1, 19rem)",
+              base: "repeat(1, 17rem)",
               md: "repeat(3, 12rem)",
               lg: "repeat(3, 14rem)",
               xl: "repeat(3, 20rem)",
