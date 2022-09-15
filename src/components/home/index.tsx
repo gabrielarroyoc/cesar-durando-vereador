@@ -53,7 +53,7 @@ export function Home() {
             _hover={{ color: "blueCesar.500" }}
             color="white"
           >
-            Ajude Cesar
+            Mais sobre Cesar
           </Link>
         </HStack>
       </Box>
